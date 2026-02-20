@@ -1,13 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Los mejores Super Bowls de la historia" />
+  <title>Fundamentos de HTML</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <div>
-       <h1>Hola mundo</h1>
-    </div>
+
+<header>
+  <h1>¿Cual es el mejor Super Bowl de la Historia?</h1>
+  <img src="imagenes/superBowl_Historicos.jpg" width="500" height="300" alt="Super Bowl LI">
+  <p>Y es que el debate por saber cual es el mejor Super Bowl de la historia es completamente subjetivo y todos tienen sus razones. Los elementos que hacen un gran super bowl son: Un partido emocionante que se define a menudo en los últimos minutos (o segundos), con actuaciones estelares de los jugadores.</p>
+  <p>Sin embargo, hay algunos que se repiten y son los mas mencionados cuando se pregunta cual es el mejor de todos.</p>
+
+  <h2>Los mas fans recordaran si les mencionas: Helmet Catch, La atrapada de Holmes, balon en la yarda uno ...</h2>
+
+  <p><A>Aqui una breve recopilacion de los mas recordados para mi y destacando lo mas importante de cada uno.</p>
+
+  <nav>
+    <ul>
+      <li><a href="#sb-li">Super Bowl LI</a></li>
+      <li><a href="#sb-xlix">Super Bowl XLIX</a></li>
+      <li><a href="#sb-xlii">Super Bowl XLII</a></li>
+      <li><a href="#sb-xliii">Super Bowl XLIII</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main>
+
+<section>
+<h2>Super Bowls legendarios</h2>
+
+<article id="sb-li">
+  <h3>Super Bowl LI</h3>
+  <p>Los Falcons dominaron la primera mitad y llegaron a tener una ventaja de 28-3 a mediados del tercer cuarto. New England anotó 25 puntos consecutivos sin respuesta para empatar el juego 28-28 en los segundos finales del tiempo regular.</p>
+  <p>Fue el primer Super Bowl en la historia que se definió en tiempo extra. Los Patriots ganaron el volado, recibieron el balón y recorrieron el campo para anotar el touchdown de la victoria mediante una carrera de 2 yardas de James White.</p>
+  <img src="imagenes/superBowl_LI.jpg" alt="Super Bowl LI">
+</article>
+
+<article id="sb-xlix">
+  <h3>Super Bowl XLIX</h3> 
+  <p>Intercepción final en la yarda 1 que decidió el campeonato.</p>
+  <p>Es recordado como uno de los finales más dramáticos en la historia de la NFL.</p>
+  <p>Con menos de un minuto restante, Seattle avanzó hasta la yarda 1 de los Patriots tras una atrapada acrobática de Jermaine Kearse. En lugar de correr con Marshawn Lynch, Seattle optó por un pase. El novato no reclutado Malcolm Butler interceptó el envío de Russell Wilson en la línea de gol con 20 segundos restantes, sellando la victoria para los Patriots.</p>
+  <img src="imagenes/superBowl_XLIX.jpg" alt="Super Bowl XLIX">
+</article>
+
+<article id="sb-xlii">
+  <h3>Super Bowl XLII</h3>
+  <p>Disputado el 3 de febrero de 2008, es recordado como una de las mayores sorpresas en la historia de la NFL. Los New York Giants derrotaron 17-14 a los New England Patriots, impidiéndoles completar la primera temporada perfecta de 19-0</p>
+  <p>Incluyó la legendaria atrapada Helmet Catch. En una situación de tercera oportunidad y 5 yardas, Eli Manning escapó milagrosamente de varios defensas que lo tenían sujetado del jersey y lanzó un pase profundo. El receptor David Tyree realizó una recepción histórica al atrapar el balón y asegurarlo contra su propio casco mientras caía al suelo bajo la presión del defensa Rodney Harrison.</p>
+  <img src="imagenes/superBowl_XLII.jpg" width="400" height="300" alt="Super Bowl XLII">
+</article>
+
+<article id="sb-xliii">
+  <h3>Super Bowl XLIII</h3>
+  <p>Fue un partido dramático, definido por una espectacular recepción de touchdown de Santonio Holmes a 35 segundos del final, quien fue nombrado MVP</p>
+  <p>Antes del descanso, el linebacker de los Steelers, James Harrison, devolvió una intercepción 100 yardas para un touchdown, marcando la jugada más larga en la historia del Super Bowl.</p>
+  <img src="imagenes/superBowl_XLIII.jpg" alt="Super Bowl XLIII">
+</article>
+
+</section>
+
+<section>
+<h2>¿Y para ti, cual es el mejor?</h2>
+<h2>¡Cuéntanos tu opinión!</h2>
+
+<form>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre">
+
+  <label for="favorito">Elige uno:</label>
+  <select id="favorito">
+    <option>Super Bowl LI</option>
+    <option>Super Bowl XLIX</option>
+    <option>Super Bowl XLII</option>
+    <option>Super Bowl XLIII</option>
+  </select>
+
+  <button type="submit">Enviar</button>
+  <p id="mensajeGracias" style="display:none; color:green; font-weight:bold;">
+  Gracias por participar en la encuesta 🏈
+  </p>
+</form>
+
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 Fundamentos de HTML. Todos los derechos reservados.</p>
+</footer>
+
+   <script>
+     const form = document.querySelector("form");
+     const mensaje = document.getElementById("mensajeGracias");
+
+     form.addEventListener("submit", function(event) {
+     event.preventDefault(); 
+
+     mensaje.style.display = "block"; 
+     form.reset();
+    });
+   </script>
+
 </body>
 </html>
